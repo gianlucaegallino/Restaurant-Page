@@ -13,6 +13,7 @@ body{
     background-color: rgb(255, 253, 248);
     border-bottom: 1px solid rgb(241, 240, 236);
     box-shadow: 0px 3px 10px rgba(201, 201, 201, 0.2);
+    height: 65px;
 }
 
 button {
@@ -43,4 +44,12 @@ button:hover {
     width: 45px;  
     padding-top: 10px;
     padding-bottom: 10px; 
+    transition: all 0.2s;
+}
+
+.mainLogo:hover {
+    height: 41px;
+    width: 41px;  
+    cursor: pointer;
+    transition: all 0.2s;
 }
