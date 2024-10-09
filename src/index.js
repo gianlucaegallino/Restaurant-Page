@@ -5,6 +5,6 @@ import "./normalize.css"
 import "./styles.css";
 
 // import modules
-import { panFunction } from "./panning-magic";
+import { parallax } from "./parallaxFunction";
 
-document.addEventListener("mousemove", panFunction);
+document.addEventListener("mousemove", parallax);
