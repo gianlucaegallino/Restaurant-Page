@@ -5,6 +5,9 @@ function createHome() {
     contentSection.innerHTML = ""
 
     //Create required elements
+    const homeContent = document.createElement("div");
+    homeContent.setAttribute("id", "homeContent")
+
     const heroImg = document.createElement("img");
     heroImg.src = heroImage;
     heroImg.setAttribute("class", "heroImg parallaxElement");
@@ -23,13 +26,19 @@ function createHome() {
 
     //append Children
 
+    contentSection.appendChild(homeContent);
+
     heroSection.appendChild(heroText);
     heroSection.appendChild(heroBtn);
 
-    contentSection.appendChild(heroImg);
-    contentSection.appendChild(heroSection);
+    homeContent.appendChild(heroImg);
+    homeContent.appendChild(heroSection);
+
+
 
 
 }
+
+
 
 export { createHome as createHome }
