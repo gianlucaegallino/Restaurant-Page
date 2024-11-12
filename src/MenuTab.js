@@ -5,74 +5,78 @@ import monzaTiramisu from "./monzaTiramisu.jpg"
 import buenosairesBlossom from "./buenosairesBlossom.jpg"
 import madridSangria from "./madridSangria.jpg"
 
-
-
 function createMenu() {
 
     //Wipe previous contents
+
     const contentSection = document.querySelector("#content")
     contentSection.innerHTML = ""
 
+
     //Create required elements
 
+    //Menu Content
+
     const menuContent = document.createElement("div");
+
     menuContent.setAttribute("id", "menuContent");
 
-    contentSection.appendChild(menuContent);
+
+    // Menu Area
 
     const menuArea = document.createElement("div");
+
     menuArea.setAttribute("id", "menuArea");
 
-    menuContent.appendChild(menuArea);
+
+    // Menu Header Title
     
     const menuHeaderTitle = document.createElement("h1");
+
     menuHeaderTitle.setAttribute("id","menuHeaderTitle");
+
     menuHeaderTitle.textContent = "Our Menu"
 
-    menuArea.appendChild(menuHeaderTitle);
+
+    //Menu Sections
+
 
     const menuSection1 = document.createElement("div");
-    menuSection1.setAttribute("class","menuSection");
-
     const menuSection2 = document.createElement("div");
-    menuSection2.setAttribute("class","menuSection");
-
     const menuSection3 = document.createElement("div");
+
+    menuSection1.setAttribute("class","menuSection");
+    menuSection2.setAttribute("class","menuSection");
     menuSection3.setAttribute("class","menuSection");
 
-    menuArea.appendChild(menuSection1);
-    menuArea.appendChild(menuSection2);
-    menuArea.appendChild(menuSection3);
+
+    // Menu Section Titles
 
     const menuSectionTitle1 = document.createElement("h2");
-    menuSectionTitle1.setAttribute("class","menuSectionTitle");
-    menuSectionTitle1.textContent = "Main Dishes"
-
     const menuSectionTitle2 = document.createElement("h2");
-    menuSectionTitle2.setAttribute("class","menuSectionTitle");
-    menuSectionTitle2.textContent = "Desserts"
-     
-
     const menuSectionTitle3= document.createElement("h2");
+
+    menuSectionTitle1.setAttribute("class","menuSectionTitle");
+    menuSectionTitle2.setAttribute("class","menuSectionTitle");
     menuSectionTitle3.setAttribute("class","menuSectionTitle");
+
+    menuSectionTitle1.textContent = "Main Dishes"
+    menuSectionTitle2.textContent = "Desserts"
     menuSectionTitle3.textContent = "Drinks"
     
-    menuSection1.appendChild(menuSectionTitle1);
-    menuSection2.appendChild(menuSectionTitle2);
-    menuSection3.appendChild(menuSectionTitle3);
+   
+    //Menu Item Areas
 
     const menuItems1 = document.createElement("div"); 
-    menuItems1.setAttribute("class","menuItems");
-
     const menuItems2 = document.createElement("div"); 
-    menuItems2.setAttribute("class","menuItems");
-
     const menuItems3 = document.createElement("div"); 
+
+    menuItems1.setAttribute("class","menuItems");
+    menuItems2.setAttribute("class","menuItems");
     menuItems3.setAttribute("class","menuItems");
 
-    menuSection1.appendChild(menuItems1);
-    menuSection2.appendChild(menuItems2);
-    menuSection3.appendChild(menuItems3);
+
+    // Individual Menu Items
 
     const menuItem1 = document.createElement("div");
     const menuItem2 = document.createElement("div"); 
@@ -88,12 +92,8 @@ function createMenu() {
     menuItem5.setAttribute("class","menuItem");
     menuItem6.setAttribute("class","menuItem");
 
-    menuItems1.appendChild(menuItem1);
-    menuItems1.appendChild(menuItem2);
-    menuItems2.appendChild(menuItem3);
-    menuItems2.appendChild(menuItem4);
-    menuItems3.appendChild(menuItem5);
-    menuItems3.appendChild(menuItem6);
+
+    // Item Images
 
     const menuItemImg1= document.createElement("img"); 
     const menuItemImg2= document.createElement("img"); 
@@ -110,33 +110,21 @@ function createMenu() {
     menuItemImg6.setAttribute("class", "menuItemImg");
 
     menuItemImg1.setAttribute("src", brooklynBurger);
-    menuItemImg1.setAttribute("alt", "brooklyn burger");
-
     menuItemImg2.setAttribute("src", tokyoStirfry);
-    menuItemImg2.setAttribute("alt", "tokyo stirfry");
-
     menuItemImg3.setAttribute("src", MunichCakes);
-    menuItemImg3.setAttribute("alt", "munich cakes");
-
     menuItemImg4.setAttribute("src", monzaTiramisu);
-    menuItemImg4.setAttribute("alt", "monza tiramisu");
-
     menuItemImg5.setAttribute("src", buenosairesBlossom);
-    menuItemImg5.setAttribute("alt", "buenos aires blossom");
-    
     menuItemImg6.setAttribute("src", madridSangria);
+
+    menuItemImg1.setAttribute("alt", "brooklyn burger");
+    menuItemImg2.setAttribute("alt", "tokyo stirfry");
+    menuItemImg3.setAttribute("alt", "munich cakes");
+    menuItemImg4.setAttribute("alt", "monza tiramisu");
+    menuItemImg5.setAttribute("alt", "buenos aires blossom");
     menuItemImg6.setAttribute("alt", "madrid Sangria");
 
 
-    menuItem1.appendChild(menuItemImg1);
-    menuItem2.appendChild(menuItemImg2);
-    menuItem3.appendChild(menuItemImg3);
-    menuItem4.appendChild(menuItemImg4);
-    menuItem5.appendChild(menuItemImg5);
-    menuItem6.appendChild(menuItemImg6);
-
-
-    
+    //Item Names
         
     const menuItemName1= document.createElement("h3");
     const menuItemName2= document.createElement("h3"); 
@@ -159,13 +147,8 @@ function createMenu() {
     menuItemName5.textContent = "Buenos Aires Blossom";
     menuItemName6.textContent = "Madrid Sangria";
 
-    menuItem1.appendChild(menuItemName1);
-    menuItem2.appendChild(menuItemName2);
-    menuItem3.appendChild(menuItemName3);
-    menuItem4.appendChild(menuItemName4);
-    menuItem5.appendChild(menuItemName5);
-    menuItem6.appendChild(menuItemName6);
-
+    
+    //Item Descriptions
 
     const menuItemDescription1= document.createElement("p");
     const menuItemDescription2= document.createElement("p"); 
@@ -188,15 +171,55 @@ function createMenu() {
     menuItemDescription5.textContent = "Gin and tonic with lemon and apple cider, topped with flowers.";
     menuItemDescription6.textContent = "Red wine with soda, orange, sugar and watermelon.";
 
+    
+
+    //Append Children
+
+    contentSection.appendChild(menuContent);
+
+    menuContent.appendChild(menuArea);
+    
+    menuArea.appendChild(menuHeaderTitle);
+
+    menuArea.appendChild(menuSection1);
+    menuArea.appendChild(menuSection2);
+    menuArea.appendChild(menuSection3);
+
+    menuSection1.appendChild(menuSectionTitle1);
+    menuSection2.appendChild(menuSectionTitle2);
+    menuSection3.appendChild(menuSectionTitle3);
+
+    menuSection1.appendChild(menuItems1);
+    menuSection2.appendChild(menuItems2);
+    menuSection3.appendChild(menuItems3);
+
+    menuItems1.appendChild(menuItem1);
+    menuItems1.appendChild(menuItem2);
+    menuItems2.appendChild(menuItem3);
+    menuItems2.appendChild(menuItem4);
+    menuItems3.appendChild(menuItem5);
+    menuItems3.appendChild(menuItem6);
+
+    menuItem1.appendChild(menuItemImg1);
+    menuItem2.appendChild(menuItemImg2);
+    menuItem3.appendChild(menuItemImg3);
+    menuItem4.appendChild(menuItemImg4);
+    menuItem5.appendChild(menuItemImg5);
+    menuItem6.appendChild(menuItemImg6);
+
+    menuItem1.appendChild(menuItemName1);
+    menuItem2.appendChild(menuItemName2);
+    menuItem3.appendChild(menuItemName3);
+    menuItem4.appendChild(menuItemName4);
+    menuItem5.appendChild(menuItemName5);
+    menuItem6.appendChild(menuItemName6);
+
     menuItem1.appendChild(menuItemDescription1);
     menuItem2.appendChild(menuItemDescription2);
     menuItem3.appendChild(menuItemDescription3);
     menuItem4.appendChild(menuItemDescription4);
     menuItem5.appendChild(menuItemDescription5);
     menuItem6.appendChild(menuItemDescription6);
-
-
-    //append Children
 
 }
 
