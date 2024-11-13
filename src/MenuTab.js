@@ -7,6 +7,11 @@ import madridSangria from "./madridSangria.jpg"
 
 function createMenu() {
 
+    //Show Overflow
+    const body = document.querySelector("body");
+    body.classList.remove("hideOverflow");
+    window.scrollTo(0,0);
+
     //Wipe previous contents
 
     const contentSection = document.querySelector("#content")

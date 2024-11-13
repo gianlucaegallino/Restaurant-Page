@@ -19,8 +19,14 @@ body {
     grid-template-columns: 1fr;
     width: 100vw;
     height: 100vh;
-    /*overflow: hidden;*/
+    overflow-y: visible;
+    overflow-x: hidden;
     font-family: "Helvetica", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.hideOverflow {
+    overflow: hidden;
+    
 }
 
 #nav {
