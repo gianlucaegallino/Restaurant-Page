@@ -2,7 +2,7 @@
 function createAbout() {
 
     //Hide Overflow
-    const body = document.querySelector("#ody");
+    const body = document.querySelector("body");
     body.classList.add("hideOverflow");
     window.scrollTo(0,0);
 
