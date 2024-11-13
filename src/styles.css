@@ -212,3 +212,47 @@ body {
 .menuSection{
     width: 65vw;
 }
+
+#aboutContent{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    margin-top: 65px;
+    height: calc(100vh - 65px);
+    align-items: stretch;
+    justify-items: start;
+    background-color: rgb(255, 251, 240);
+    
+}
+
+#aboutUsSection{
+    grid-row-start:1;
+    grid-row-end: 3;
+    padding: 70px;
+    padding-bottom: 100px;
+    align-self: center;
+    border-right: rgb(60, 194, 42) 2px solid;
+}
+#openingHoursSection{
+    
+    padding: 70px;
+}
+#locationSection{
+    padding: 70px;
+    
+}
+
+.importantHeading{ 
+    font-size: 60px;
+}
+
+.secondaryHeading {
+    font-size: 40px;
+}
+
+.aboutGeneralText{
+    font-size: 22px;
+}
+.aboutSecondaryText{
+    font-size: 19px;
+}
